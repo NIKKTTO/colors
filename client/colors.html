@@ -1,0 +1,22 @@
+<head>
+  <title>colors</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    {{> colors}}
+  </div>
+</body>
+
+<template name="colors">
+  <div class="row sortable">
+    {{#each colors}}
+      <div class="color-cont col-md-1">
+        <div class="row">
+          <div class="color" style="background-color: #{{hex}}"></div>
+          <span>{{name}}</span>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</template>
